@@ -44,9 +44,9 @@ It prints a stylized banner, prompts the user for settings, generates a password
 
 - **Python 3.7+** (tested up to Python 3.11)
 - Uses only standard libraries:
-  - `secrets`
-  - `string`
-  - `math`
+  - secrets
+  - string
+  - math
 
 No additional external libraries are required.
 
@@ -62,7 +62,7 @@ The script prompts the user for:
    - Lowercase letters (a-z)
    - Uppercase letters (A-Z)
    - Digits (0-9)
-   - Special Characters (e.g., `!@#$%^&*()-_=+[]{}|;:,.<>?/\`)
+   - Special Characters (!@#$%^&*()-_=+[]{}|;:,.<>?/\)
 3. **Require Each** (yes/no): Whether to mandate at least one character from each selected category.
 
 ### 3. Password Generation
@@ -117,6 +117,7 @@ The script prompts the user to either generate a new password (press Enter) or t
 - **Entropy Calculation**: Shannon entropy of the generated password itself is a rough measure of complexity, not a definitive guarantee against real-world attacks.
 - **Character Pool Limitations**: Although the special characters string is reasonably broad, you can modify it to include (or exclude) custom characters.
 - **Minimum Length**: While the script suggests a minimum length of 12, longer passwords typically provide more security.
+- **Note: KEYS GENERATED TAKE TIME, DUE TO THE DESIGN OF THE SCRIPT THAT MAXIMMIZES CRYPTOGRAPHIC SECURITY. AES USES 10 ROUNDS FOR A 128 BIT KEY, MY ALGORITHM (CES) USES 20. AES USES 100,000 ITERATIONS, I USE 2,000,000.**
 
 ## License
 
